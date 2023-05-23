@@ -6,7 +6,7 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro matriz[3][3], linha, coluna, i = 1, soma = 0
+		inteiro matriz[3][3], linha, coluna, i = 0, soma = 0
 		para(linha = 0; linha < 3; linha++) {
 			para(coluna = 0; coluna < 3; coluna++) {
 				escreva("Digite um número da matriz: ")
