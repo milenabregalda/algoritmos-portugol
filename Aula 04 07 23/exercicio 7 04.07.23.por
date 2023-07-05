@@ -14,7 +14,7 @@ programa
 	funcao inicio() {
 		perguntarSalario()
 		se (salarioBruto < 1000.0) {
-			salarioLiquido = salarioBruto
+			zerarImposto()
 		}
 		senao se (salarioBruto >= 1000.0 e salarioBruto <= 2200.0) {
 			calcularImposto(0.13)
@@ -36,6 +36,11 @@ programa
 		calculoImposto = salarioBruto * imposto
 		salarioLiquido = salarioBruto - calculoImposto
 		escreva("\nVocê tem que pagar ",porcImposto,"% de imposto de renda.")
+	}
+
+	funcao zerarImposto(){
+		salarioLiquido = salarioBruto
+		escreva("\nComo o seu salário é menor do que 1000 reais, você não precisa pagar o imposto de renda.")
 	}
 
 	funcao informarSalario() {
