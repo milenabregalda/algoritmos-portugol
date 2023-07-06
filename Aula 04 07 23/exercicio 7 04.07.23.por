@@ -31,8 +31,7 @@ programa
 	}
 
 	funcao calcularImposto(real imposto) {
-		real porcImposto
-		porcImposto = imposto * 100
+		real porcImposto = imposto * 100
 		calculoImposto = salarioBruto * imposto
 		salarioLiquido = salarioBruto - calculoImposto
 		escreva("\nVocê tem que pagar ",porcImposto,"% de imposto de renda.")
