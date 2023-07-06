@@ -40,9 +40,8 @@ programa
 	}
 
 	funcao calcularLimiteEmprestimo(real emprestimo) {
-		real porcEmprestimo
-		porcEmprestimo = emprestimo * 100
-		limiteEmprestimo = salario * 	emprestimo
+		real porcEmprestimo = emprestimo * 100
+		limiteEmprestimo = salario * emprestimo
 		escreva("\nO seu limite de empréstimo é ",porcEmprestimo,"% do seu salário e fica em R$ ",limiteEmprestimo,".")
 	}
 }
