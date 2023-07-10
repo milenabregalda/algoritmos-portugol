@@ -17,8 +17,6 @@ programa
 		calcularDesconto()
 	}
 
-	
-
 	funcao lerSalarios() {
 		para (i = 0; i <= 4; i++) {
 			escreva("Digite o salário do funcionário ",i2,": ")
