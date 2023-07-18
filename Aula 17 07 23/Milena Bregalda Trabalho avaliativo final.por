@@ -15,6 +15,7 @@ programa {
 	 */
 
 	inteiro matriz[8][8], transposta[8][8], i, j, opcao, numMaior = 0, numMenor = 100, numProcurado = 0, contProcurado = 0, soma = 0
+	inteiro multi = 0, coordenadaMaxima = 7, numero = 0
 	logico execucao = verdadeiro
 
 	funcao gerarMatriz() {
@@ -56,8 +57,9 @@ programa {
 				caso 2:
 					u.aguarde(1000)
 					limpa()
-					escreva("\nb - Pulei por enquanto, pesquisar depois")
-					u.aguarde(3000)
+					escreverMatriz()
+					escreverPrimos()
+					u.aguarde(7000)
 					pare
 	
 				caso 3:
@@ -76,25 +78,15 @@ programa {
 					limpa()
 					escreverMatriz()
 					somarPrincipal()
-
-
-
-
-
-					// https://github.com/milenabregalda/Algoritmos-portugol/blob/main/14-decima-quarta-aula/exercicio3.calculesomas.por
-
-
-
-
-
-					
 					u.aguarde(3000)
 					pare
 	
 				caso 5:
 					u.aguarde(1000)
 					limpa()
-					escreva("\ne")
+					multi = matriz[0][0]
+					escreverMatriz()
+					multiplicarSecundaria()
 					u.aguarde(3000)
 					pare
 	
@@ -116,7 +108,7 @@ programa {
 
 				caso 0:
 					limpa()
-					escreva("\nSaindo do programa\n...")
+					escreva("\nSaindo do programa...\n")
 					u.aguarde(2000)
 					execucao = falso
 					pare
@@ -152,13 +144,42 @@ programa {
 		}
 	}
 
-	funcao encontrarPrimos() { // nao ta pronto dps vc se estressa com isso
-		escreva("\n\n\nNúmeros primos na matriz:\n")
+	funcao verificarPrimo(inteiro num, inteiro primo) {
+		se (num == primo) {
+			escreva(num," ")
+		}
+	}
+		
+	funcao escreverPrimos() {
+		escreva("\n\nNúmeros primos na matriz:\n")
 		para (i = 0; i < 8; i++) {
 			para(j = 0; j < 8; j++) {
-				se (matriz[i][j] % 2 == 1) {
-					escreva(matriz[i][j]," ")
-				}
+				numero = matriz[i][j]
+				verificarPrimo(numero, 2)
+				verificarPrimo(numero, 3)
+				verificarPrimo(numero, 5)
+				verificarPrimo(numero, 7)
+				verificarPrimo(numero, 11)
+				verificarPrimo(numero, 13)
+				verificarPrimo(numero, 17)
+				verificarPrimo(numero, 19)
+				verificarPrimo(numero, 23)
+				verificarPrimo(numero, 29)
+				verificarPrimo(numero, 31)
+				verificarPrimo(numero, 37)
+				verificarPrimo(numero, 41)
+				verificarPrimo(numero, 43)
+				verificarPrimo(numero, 47)
+				verificarPrimo(numero, 53)
+				verificarPrimo(numero, 59)
+				verificarPrimo(numero, 61)
+				verificarPrimo(numero, 67)
+				verificarPrimo(numero, 71)
+				verificarPrimo(numero, 73)
+				verificarPrimo(numero, 79)
+				verificarPrimo(numero, 83)
+				verificarPrimo(numero, 89)
+				verificarPrimo(numero, 97)
 			}
 		}
 	}
@@ -185,9 +206,16 @@ programa {
 
 	funcao somarPrincipal() {
 		para (i = 0; i < 8; i++) {
-			soma = soma + matriz[i][i]
+			soma += matriz[i][i]
 		}
 		escreva("\nSoma da diagonal principal: ",soma)
+	}
+
+	funcao multiplicarSecundaria() {
+		para (i = 0; i < 8; i++) {
+			multi *= matriz[i][coordenadaMaxima - i]
+		}
+		escreva("\nMultiplicação da diagonal secundária: ",multi)
 	}
 
 	funcao procurarNumero() {
@@ -231,7 +259,6 @@ programa {
 	funcao inicio() {
 		gerarMatriz()
 		menu()
-		
 	}
 }
 /* $$$ Portugol Studio $$$ 
