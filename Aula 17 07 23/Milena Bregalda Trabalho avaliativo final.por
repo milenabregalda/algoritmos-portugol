@@ -219,6 +219,7 @@ programa {
 	}
 
 	funcao procurarNumero() {
+		contProcurado = 0	
 		escreva("\nDigite o número que você deseja procurar na matriz: ")
 		leia(numProcurado)
 		limpa()
