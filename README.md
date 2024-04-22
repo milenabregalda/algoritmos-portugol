@@ -1,1 +1,1 @@
-# algoritmos-portugol
+# senac-tds
