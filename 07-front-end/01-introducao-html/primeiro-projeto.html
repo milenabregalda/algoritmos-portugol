@@ -1,0 +1,154 @@
+<!DOCTYPE html> <!-- Instrução de que se trata do uso de HTML5 -->
+
+<!-- Aula de 08/07/2024 - Introdução ao HTML: tags estruturais -->
+<!-- Aula de 09/07/2024 - Header -->
+<!-- Aula de 10/07/2024 - Nav -->
+<!-- Aula de 11/07/2024 - Atualização de tabela, mais links e exercícios (em outro arquivo) -->
+
+
+<html> <!-- Aqui se inicia a página de visualização do usuário -->
+
+<head>
+    <title>*** Minha primeira página ***</title>
+    <!-- Tag de título da página (não aparece no conteúdo dela, é o nome da aba) -->
+
+</head>
+
+<body bgcolor="#ADD8E6">
+    <!-- Define a cor, como está em body, a cor de toda a página muda. Está em desuso porque é utilizado o CSS hoje em dia, mas ainda funciona -->
+
+    <!-- Header -->
+    <!-- Cabeçalho do HTML para incluir logotipo, login (Entrar), etc. -->
+
+    <header>
+        <p><b>
+                <center>Olá, mundo!</center>
+            </b></p>
+
+        <!-- p: tag de parágrafo, é o que aparece na página em si -->
+        <!-- b: tag de negrito -->
+        <!-- center: tag em desuso para centralizar, por isso ficou vermelha (método mais moderno por CSS), mas ainda funciona -->
+
+        <!-- Colocar imagens de domínio público: site utilizado para baixar foi o Pixabay, referenciar a imagem na pasta imagens dentro deste projeto -->
+        <p>
+            <center><img src="imagens\casa-futurista.png" height="50 px" width="100px"> Bem-vindo </img></center>
+        </p>
+        <!-- Height e width para definir tamanho da imagem -->
+        <!-- O center aqui centralizou o parágrafo todo, que incluía vários elementos (imagem e label) -->
+
+        <br> <!-- Espaço, quebra de linha -->
+
+        <p>
+            <center><label>Entrar</label></center>
+        </p>
+        <!-- Label: Legenda onde digo que tem alguma coisa para entrar no site -->
+        <!-- Center também centraliza tudo, assim como mais para baixo -->
+
+        <p>
+            <center>
+                <label>Usuário:</label><textarea></textarea><label>Senha:</label><textarea></textarea><button>OK</button>
+            </center>
+        </p>
+        <!-- Button: um botão -->
+
+    </header>
+
+    <!-- nav: Espaço para inserção dos hiperlinks -->
+    <nav>
+        <p>
+            <!-- ul: Lista não ordenada (bolinhas) -->
+        <ul type="Circle">
+            <!-- Tipo Square faz bolinhas da lista ficarem quadradas, Circle fica redonda não preenchida, padrão redonda preenchida -->
+            <!-- li: lista dos itens: -->
+
+            <!-- href: hiperlink para outro arquivo do projeto ou link da internet (acima, para outros arquivos html no projeto) -->
+            <li> <a href="home.html">Home</a>| <a href="servicos.html">Serviços</a> | <a
+                    href="produtos.html">Produtos</a> | <a href="equipe.html">Equipe</a> | <a
+                    href="contatos.html">Contatos</a></li>
+
+            <!-- Professora quer deixar no nav tudo junto por enquanto, mas abaixo código de como a lista ficaria com um item abaixo do outro: -->
+            <br>
+            <li> Home </li>
+            <li> Serviços </li>
+            <li> Produtos </li>
+            <li> Equipe </li>
+            <li> Contatos </li>
+        </ul>
+        </p>
+    </nav>
+    <br>
+    <br>
+
+    <!-- Section: sessão dentro do HTML -->
+    <section>
+
+        <!-- ol: Lista ordenada (números - 1, 2, 3, etc.)-->
+        <ol type="A"> <!-- Tipo diz em qual número a lista começa -->
+            <!-- Tem vários tipos: 1 para números (padrão), A para letras, I para números romanos, etc. -->
+            <li>Gatos</li>
+            <li>Cachorros</li>
+            <li>Gatos e cachorros</li>
+
+            <br>
+
+            <!-- Hiperlink com imagem (ao clicar no link na página, ele abre uma nova página só com a foto): -->
+            <li><a href="imagens/gato.jpg" height="50px" width="100px">Gatos</a></li>
+            <li><a href="imagens/cachorro.jpg" height="50px" width="100px">Cachorros</a></li>
+            <li><a href="imagens/pets.jpg" height="50px" width="100px">Gatos e cachorros</a></li>
+        </ol>
+        <br>
+        <br>
+
+        <!-- Hiperlink com link da internet (não esquecer do https, senão dá erro): -->
+        <ol type="a">
+            <li><a href="https://www.google.com/">Google</a></li>
+            <li><a href="https://www.tecmundo.com.br/">TecMundo</a></li>
+            <li><a href="https://olhardigital.com.br/">Olhar Digital</a></li>
+        </ol>
+
+        <!-- Trabalhando com tabelas -->
+        <table border="1"> <!-- Tag em desuso também, define a borda de fora e entre as informações -->
+            <tr> <!-- tr é linha -->
+                <td>Horário</td> <!-- td é coluna -->
+                <td>Dias da Semana</td>
+                <td>Dias do Mês</td>
+            </tr>
+            <tr>
+                <td>9h</td>
+                <td>Quarta-feira</td>
+                <td>22/07</td>
+            </tr>
+            <tr>
+                <td>11h</td>
+                <td>Sexta-feira</td>
+                <td>24/07</td>
+            </tr>
+        </table>
+
+        <br>
+        <br>
+
+        <!-- Strong: toque de negrito (e outras coisas) -->
+        <p>Músicas:</p>
+        <p><strong><a href="https://www.youtube.com/watch?v=j6ydoOJYUXs">Papas da Língua</a></strong></p>
+        <p><strong><a href="https://www.youtube.com/watch?v=qgaRVvAKoqQ">Pearl Jam</a></strong></p>
+
+        <br>
+        <br>
+    </section>
+
+    <!-- Rodapé: seção inferior de um site -->
+    <footer>
+        <center><strong>
+                <p>Copyright para Alunos SenacTech - Todos os direitos reservados</p>
+                <p>Endereço: Av. Venâncio Aires, 50 - Bairro: Menino Deus</p>
+                <p>Telefone para Contato: (51)33254674</p>
+                <p>E-mail: petit@gmail.com</p>
+                <p><a href="https://linkedin.com">Meu Portifólio</a></p>
+
+            </strong></center>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Animações</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Corrigi a referência ao arquivo jQuery -->
+    <script>
+        //Chamei a função Jquery
+        $(document).ready(function () {
+            //Inclui o click no button
+            $("button").click(function () {
+                //Criei a variável div para estilizar o animate
+                var div = $("div");
+                //Estilizei a animação, passo a passo, com opacidade e velocidade
+                div.animate({ height: '300px', opacity: '0.4' }, 5000);
+                div.animate({ width: '300px', opacity: '0.4' }, 5000);
+                div.animate({ height: '100px', opacity: '0.4' }, 5000);
+                div.animate({ width: '100px', opacity: '0.8' }, 5000);
+            });
+        });        
+    </script>
+</head>
+
+<body>
+    <!--Criamos o button que já recebe a função Jquery-->
+    <button>Iniciar Animação</button>
+    <br>
+    <br>
+    <!--Estilizamos a div para inicar e aplicar o método animate da função-->
+    <div style="background: #00FF00; height: 100px; width: 100px; position: absolute;"></div>
+</body>
+
+</html>

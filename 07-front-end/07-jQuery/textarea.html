@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Barra de Rolagem</title>
+    <meta charser="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Corrigi a referência ao arquivo jQuery -->
+    <script>
+        //Função chamando input e contador
+        $(document).on("input", ".contador", function () {
+            //limite de caracteres a serem digitados
+            var limite = 100;
+            //Verificação dos caracteres digitados
+            var caracteresDigitados = $(this).val().length;
+            //Subtração do limite 100 em relação aos carateres digitados.
+            var caracteresRestantes = limite - caracteresDigitados;
+
+            $(".caracteres").text(caracteresRestantes);
+        });
+
+    </script>
+</head>
+<!--Estilo para o TextArea-->
+<style>
+    div {
+        float: right;
+    }
+
+    textarea {
+        width: 50%;
+    }
+</style>
+
+<body>
+    <!--Criação da label para mensagem. Na div, temos a contagem em ordem descrescente de caracteres digitados no textarea. ao chegar ao 100, não permite digitação de mais caracteres.-->
+    <label>Mensagem:
+        <div>Caracteres restantes <b><span class="caracteres">100</span></b></div>
+    </label>
+    <!--maxlength é o tamanho máximo de caracteres aceitos-->
+    <textarea type="text" rows="7" maxlength="100" class="formField contador"></textarea>
+</body>
+
+</html>

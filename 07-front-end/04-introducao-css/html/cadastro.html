@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Aula de 16/07/2024 - HTML formulário (novas tags) -->
+
+<head>
+    <meta charset="UTF-8">
+    <html lang="pt-BR">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <!-- Arquivos html em pasta html e arquivo css em pasta css, teve que voltar o diretório com .. para que achasse a pasta css e o arquivo css -->
+    <title>Cadastro de Usuários</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <nav>
+
+    </nav>
+    <!-- Representa uma seção de um documento que está marginalmente relacionada ao conteúdo ao redor, como uma barra lateral -->
+    <aside>
+        <form action="">
+            <fieldset> <!-- A borda do formulário -->
+
+                <legend>Cadastro de Usuário</legend> <!-- Como se fosse um subtítulo -->
+                <br>
+
+                <!-- Maneira "gambiarra" que a professora ensinou para selecionar foto (mais para frente, aprenderemos a forma correta com JQuery): -->
+                <!-- <label>Selecione uma foto:</label><br>
+                    <textarea height="50px" width="30px"></textarea><br>
+                    <input type="file">
+                    <br>
+                    <br> -->
+
+                <label>Digite seu nome:</label> <!-- Enunciado -->
+                <input type="text" placeholder="Neste campo, digite nome e sobrenome" required />
+                <!-- Input onde usuário digita (tipo de texto); Placeholder texto que aparece até usuário clicar como uma dica do que preencher -->
+                <br>
+                <br>
+
+                <label>Digite seu endereço:</label>
+                <input type="text" placeholder="Digite seu endereço com o número da sua casa ou apartamento" required />
+                <br>
+                <br>
+
+                <label>Selecione sua data de nascimento:</label>
+                <input type="date" required /> <!-- Input formatado com tipo data, vem com calendário junto -->
+                <!-- Required não permite que o formulário seja salvo no banco de dados se este campo não estiver preenchido (como o if do Java)
+                        Também aparece um tooltiptext "Preencha este campo" nos campos com required -->
+                <br>
+                <br>
+
+                <label>Digite o nome de sua mãe:</label>
+                <input type="text" placeholder="Neste campo, digite o nome completo de sua mãe" />
+                <br>
+                <br>
+
+                <label>Digite o nome de seu pai:</label>
+                <input type="text" placeholder="Neste campo, digite o nome completo de seu pai" />
+                <br>
+                <br>
+
+                <label>Selecione como você se identifica:</label><br>
+                <input type="radio" name="genero" value="Binario" checked />Binário<br>
+                <!-- Radiobutton, checked para começar selecionado -->
+                <!--<label for="b" value="binario">Binario</label><br>-->
+                <!-- Outra maneira que aprenderemos mais para frente -->
+                <input type="radio" name="genero" value="NoBinario" />Não Binário
+                <!-- Os dois radiobuttons tem o mesmo name "genero" (como uma variável), são do mesmo grupo e só um pode ser selecionado -->
+                <!--<label for="nob" value="nob">Não Binario</label>-->
+                <br>
+                <br>
+
+                <label>Selecione a sua região:</label>
+                <input type="text">
+
+                <br>
+                <br>
+
+                <label>Selecione as opções que você possui conhecimento:</label><br>
+                <input type="checkbox" name="opcao" value="html5" />HTML5<br>
+                <!-- Checkbox (todas são do mesmo "grupo" mesmo podendo escolher várias, por isso o mesmo nome)-->
+                <input type="checkbox" name="opcao" value="CSS3" />CSS3<br>
+                <!-- O primeiro CSS3 enviado ao servidor ou processado pelo JavaScript para identificar a escolha do usuário se a checkbox estiver marcada; o segundo é mostrado ao usuário -->
+                <input type="checkbox" name="opcao" value="JavaScript" />JavaScript<br><br>
+
+                <label>Selecione o arquivo desejado:</label> <!-- Para escolher arquivo do computador -->
+                <input type="file" />
+                <br>
+                <br>
+
+                <button type="submit">Enviar</button> <button type="reset">Limpar</button>
+                <!-- Submit é atributo que envia formulário para servidor, reset limpa -->
+            </fieldset>
+        </form>
+    </aside>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>

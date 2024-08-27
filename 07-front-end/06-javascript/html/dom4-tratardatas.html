@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tratando Datas</title>
+
+    <!-- Javascript interno -->
+    <script language="javascript" type="text/javascript">
+        // Início do bloco de script JavaScript.
+
+        // Vetor para os dias da semana.
+        dia = new Array("Domingo", "Segunda", "Terça", "Quarta", "Quinta",
+            "Sexta", "Sábado");
+        // Cria um array chamado "dia" que contém os nomes dos dias da semana.
+
+        // Vetor para os meses do ano
+        mes = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
+        // Cria um array chamado "mes" que contém os nomes dos meses do ano.
+
+        // Aqui crio o construtor para poder ter acesso ao objeto Date
+        now = new Date();
+        // Cria um objeto Date chamado "now" que representa a data e hora atuais.
+
+    </script>
+    <!-- Fim do bloco de script JavaScript. -->
+</head>
+
+<body>
+    <script language="javascript" type="text/javascript">
+        // document.write imprime na tela o dia de hoje, que é mostrado a partir do Array de Dia. O now.getDate traz o dia em números, ou seja, 1, 2, 3, 4... O mês, funciona igual ao dia, pois tenho que criar um array de mês para trazer os meses por extenso. O ano é impresso através do getFullYear para trazer o ano atual.
+        document.write("<h1> Hoje é " + dia[now.getDay()] + ", " + now.getDate() + " de " + mes[now.getMonth()] + " de " + now.getFullYear() + ". </h1>");
+        // Usa document.write para escrever no documento HTML. Cria um título (h1) que mostra o dia da semana, o dia do mês, o nome do mês e o ano atual.
+
+    </script>
+</body>
+
+</html>

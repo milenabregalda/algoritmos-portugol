@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <html lang="PT-br">
+    <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+    <!-- Abaixo para chamar o Bootstrap (o CSS pode ficar junto também + é normal a página mudar quando adiciona o Bootstrap): -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Arquivos html em pasta html e arquivo css em pasta css, teve que voltar o diretório com .. para que achasse a pasta css e o arquivo css -->
+    <link rel="shortcut icon" type="imagex/png" href="../imagens/icone-loja.png"> <!-- Para adicionar o ícone -->
+    <title>Loja Online</title>
+</head>
+
+<body>
+    <!-- https://getbootstrap.com/docs/5.0/components/navbar/#scrolling - Componente "Scrolling" -->
+    <header>
+        <section>
+            <span id="diminuir-fonte"><a title="Diminuir Fonte" alt="Diminuir">A-</a> </span>
+            <span id="aumentar-fonte"><a title="Aumentar Fonte" alt="Aumentar">A+</a></span>
+        </section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand"></a> <!-- Retiramos o texto "Navbar scroll"-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <!-- Abaixo vários tipos de itens para links que podem ser utilizados: -->
+                        <!-- A professora modificou um pouco o código e removeu o link desabilitado -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                            <!-- Adicionei os links das páginas do site, removi os "#" para isso -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastroUsuario.html">Cadastro de Usuário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro.html">Entrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="quem-somos.html">Quem Somos</a>
+                        </li>
+                    </ul>
+                    <!-- Aria-disabled (que foi apagado): indica aos leitores de tela e outras tecnologias assistivas se um elemento está ou não desativado.
+                        Quando o atributo aria-disabled é definido como true, ele informa aos usuários que o elemento está desativado e não pode ser interagido.
+                        Quando definido como false, indica que o elemento está ativo e pode ser interagido. -->
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Digite aqui sua pesquisa"
+                            aria-label="Search">
+                        <button class="btn btn-secondary" type="submit">Pesquisar</button>
+                        <!-- https://getbootstrap.com/docs/5.0/components/buttons/ -->
+                        <!-- Modificamos o botão verde para um dos outros botões pré-definidos do Bootstrap (primário é o azul, secundário é o cinza)-->
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Para centralizar os botões -->
+    <!-- <div class="text-center"> 
+            <a class="btn btn-secondary" href="cadastro.html" role="button">Cadastrar</a>
+            <a class="btn btn-secondary" href="cadastro.html" role="button">Entrar</a>
+        </div> -->
+
+    <!--<a href="cadastro.html" style="text-align: justify; padding-inline: 150px;">Cadastrar</a>
+        <a href="cadastro.html" style="text-align: justify; padding-inline: 150px;">Entrar</a>-->
+
+    <nav class="botoes">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../imagens/loja-roupas.jpg" class="d-block w-100" alt="...">
+                    <!-- Coloquei a minha imagem aqui, tirei os alt e os botões como a professora pediu -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Representa uma seção de um documento que está marginalmente relacionada ao conteúdo ao redor, como uma barra lateral -->
+    <br><br>
+
+
+    <!-- Antigos que a professora disse para remover: -->
+
+    <!-- <header>
+                <ul class ="lista_imagens img">
+                    <img src="../imagens/loja-roupas2.jpg" >
+                    <img src="../imagens/batons.jpg">
+                    <img src="../imagens/teclado.jpg">
+                </ul>
+            </header> -->
+
+    <!--<ul class="lista_principal">
+                <li>LOJA ONLINE
+                    <ul class="sublista">
+                    <li>Masculino</li>
+                    <li>Feminino</li>
+                    <li>Infantil</li>
+                    </ul>
+                </li>
+                <li>CASA
+                    <ul class="sublista">
+                        <li>Cozinha</li>
+                        <li>Banheiro</li>
+                        <li>Quarto</li>
+                    </ul>
+                </li>
+                <li>BELEZA
+                    <ul class="sublista">
+                        <li>Maquiagem</li>
+                        <li>Perfumes</li>
+                    </ul>
+                </li>
+                <li>JÓIAS
+                    <ul class="sublista">
+                    <li>Brincos</li>
+                    <li>Colares</li>
+                    </ul>
+                </li>
+                <li>JARDIM
+                    <ul class="sublista">
+                        <li>Mudas de Plantas</li>
+                        <li>Vasos</li>
+                        <li>Luminárias</li>
+                    </ul>
+                </li>
+                <li>ELETRÔNICOS
+                    <ul class="sublista">
+                        <li>Celulares</li>
+                        <li>HD Externo</li>
+                        <li>Monitores</li>
+                    </ul>
+                </li>
+            </ul>             
+            <br>
+        </header>
+        <br>-->
+
+    <!-- <nav>             
+        <section id="banner">
+            <div id="botoes">
+                <img src="../imagens/loja-roupas2.jpg"> - Ao tirar o li, tira as bolinhas -->
+    <!-- <img src="../imagens/batons.jpg"> -->
+    <!-- <img src="../imagens/teclado.jpg"> -->
+    <!-- </div> -->
+    <!-- </section>
+        <br>
+        </nav> -->
+
+    <!-- Main é Tag semântica que define o conteúdo principal ou central de um documento, mas usaremos aside aqui -->
+
+    <aside>
+        <br>
+        <br>
+
+        <div class="texto-sobre-loja">
+            <h2>Sobre a Loja</h2>
+            <p>
+                Na Loja Online, você encontra tudo o que precisa para o dia a dia com um clique. Temos roupas para
+                todos, desde a moda masculina e feminina até peças infantis, além de itens para casa, beleza, joias,
+                jardim e eletrônicos.
+            </p>
+
+            <br>
+            <h2>Nossa Visão</h2>
+            <p>
+                Queremos ser a sua loja online favorita! Estamos aqui para oferecer a melhor experiência de compra, com
+                novidades sempre fresquinhas e tecnologia de ponta.
+            </p>
+
+            <br>
+            <h2>Nossos Objetivos</h2>
+            <p>
+                Nosso objetivo é ser a escolha número um quando você pensar em comprar online. Nosso foco é garantir que
+                você fique feliz com cada compra. Trabalhamos para oferecer produtos de qualidade, preços justos e uma
+                entrega rápida. Queremos que você se sinta confiante e satisfeito a cada visita à nossa loja.
+            </p>
+
+            <br>
+            <h2>Nossos Valores</h2>
+            <p>
+                Acreditamos em honestidade, qualidade e fazer o melhor sempre. Estamos comprometidos em oferecer um
+                excelente atendimento e criar um ambiente de trabalho positivo e acolhedor. Seu sorriso é nosso maior
+                prêmio!
+            </p>
+        </div>
+    </aside>
+
+    <br>
+
+    <footer class="footer">
+        <!-- Div: Elemento HTML usado para agrupar e organizar conteúdo na página -->
+        <div class="left">
+            <!-- Span: para agrupar elementos dentro de um bloco de texto para aplicar estilos
+                        ou manipular esses elementos com JavaScript (aqui não funcionou, por algum motivo, então a professora usou div class) -->
+            <!-- Antigo: <div class="span">Front-end -->
+            <h4 class="footer-title">Bem vindo ao site!</h4>
+            <br>
+            <table>
+                <tr>
+                    <td>
+                        <!-- Para colocar ícone ao invés de palavra em links: -->
+                        <p class="links">
+                            <a href="../HTML/home.html" title="Home">Home</a><br>
+                            <a href="../HTML/index.html" title="Produtos">Produtos</a><br>
+                            <a href="../HTML/cadastroUsuario.html" title="Cadastro">Cadastro de Usuário</a><br>
+                            <a href="../HTML/cadastro.html" title="Entrar">Entrar</a><br>
+                            <a href="../HTML/quem-somos.html" title="Quem Somos">Quem Somos</a>
+                        </p>
+                    </td>
+                    <td>
+                        <p class="footer-text">Endereço: Av. Assis Brasil, 5213.</p><br>
+                        <p class="footer-text">Fone: (51)3364-7896</p><br>
+                        <p class="footer-text">loja@gmail.com</p>
+                    </td>
+                    <td>
+                        <h4 class="right">Redes Sociais</h4>
+                        <div class="right">
+                            <!-- Para colocar ícone ao invés de palavra em links: -->
+                            <p class="links">
+                                <a href="https://www.facebook.com"></a><img src="../imagens/icone-facebook.png"
+                                    width="50px" height="50px">
+                                <a href="https://www.instagram.com"></a><img src="../imagens/icone-instagram.png"
+                                    width="50px" height="50px"><br>
+                            </p>
+                        </div>
+        </div>
+        </td>
+        </tr>
+        </table>
+        <br>
+        <p class="Copyright">Copyright &copy; 2024 Seu site - Todos os Direitos Reservados.</p>
+    </footer>
+    <!-- VLIBRAS: até a parte de script para adicionar acessibilidade para traduzir textos escritos para Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <!-- JS DO VLIBRAS -->
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- FIM DO VLIBRAS -->
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</html>

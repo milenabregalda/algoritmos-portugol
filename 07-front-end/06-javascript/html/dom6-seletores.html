@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function preferedBrowser() {
+            // Função para mostrar o navegador preferido do usuário.
+
+            // Acessa o valor selecionado no elemento <select> do primeiro formulário e armazena na variável 'prefer'.
+            prefer = document.forms[0].browsers.value;
+
+            // Exibe um alerta com a escolha do navegador preferido.
+            alert("Você prefere o navegador " + prefer);
+        }
+
+        function preferencia() {
+            // Função para mostrar a atividade preferida do usuário no tempo livre.
+
+            // Acessa o valor selecionado no elemento <select> do segundo formulário e armazena na variável 'gostos'.
+            gostos = document.forms[1].coisas.value;
+
+            // Exibe um alerta com a atividade preferida do usuário no tempo livre.
+            alert("Você prefere fazer no tempo livre? " + gostos);
+        }
+
+    </script>
+</head>
+
+<body>
+    <form>
+        <!-- Primeiro formulário para escolher o navegador preferido. -->
+        Escolha seu navegador
+        <!-- Texto explicativo para o usuário. -->
+
+        <!-- Elemento <select> que permite ao usuário escolher um navegador. -->
+        <select id="browsers" onchange="preferedBrowser()">
+            <!-- Define o ID do elemento <select> como "browsers". O evento 'onchange' chama a função 'preferedBrowser()' quando o valor selecionado muda. -->
+            <option value="Selecionar">Selecionar</option>
+            <!-- Opção padrão para "Selecionar". -->
+            <option value="Chrome">Chrome</option>
+            <!-- Opção para o navegador Chrome. -->
+            <option value="Internet Explorer">Internet Explorer</option>
+            <!-- Opção para o navegador Internet Explorer. -->
+            <option value="Firefox">Firefox</option>
+            <!-- Opção para o navegador Firefox. -->
+        </select>
+        <br>
+        <br>
+    </form>
+
+    <form>
+        <!-- Segundo formulário para escolher atividades preferidas no tempo livre. -->
+        Escolha Coisas que vocês gosta de fazer no tempo livre
+        <!-- Texto explicativo para o usuário. -->
+
+        <!-- Elemento <select> que permite ao usuário escolher uma atividade. -->
+        <select id="coisas" onchange="preferencia()">
+            <!-- Define o ID do elemento <select> como "coisas". O evento 'onchange' chama a função 'preferencia()' quando o valor selecionado muda. -->
+            <option value="Selecionar">Selecionar</option>
+            <!-- Opção padrão para "Selecionar". -->
+            <option value="Ler">Ler</option>
+            <!-- Opção para a atividade Ler. -->
+            <option value="Correr">Correr</option>
+            <!-- Opção para a atividade Correr. -->
+            <option value="Pesquisar">Pesquisar</option>
+            <!-- Opção para a atividade Pesquisar. -->
+            <option value="Séries">Séries</option>
+            <!-- Opção para a atividade Séries. -->
+            <option value="Cinema">Cinema</option>
+            <!-- Opção para a atividade Cinema. -->
+            <option value="dormir">Dormir</option>
+            <!-- Opção para a atividade Dormir. -->
+        </select>
+        <!-- Fim do elemento <select>. -->
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+
+<head>
+    <title>Eventos de teclado</title>
+</head>
+
+<!-- Esse código não está fazendo exatamente o que deveria (seleciona uma tecla aparece DOWN, solta aparece UP), mas para aprendizado ficará assim por enquanto -->
+
+<body>
+    <script>
+        // O onkeydown detecta quando a tecla é pressionada (bem rápido)
+        // O onkeyup é o evento que detecta o contrário, quando você solta a tecla.
+        // E o onkeypress é o de apertar uma teclada como ALT, CTRL ou SHIFT.
+        // O primeiro evento a ocorrer no processo de digitar uma tecla é o onkeydown,
+        // depois imediatamente onkeypress, então o sistema captura a teclada e depois ocorre o onkeyup.
+        // No exemplo abaixo, um código simples que mostra "DOWN" quando estamos apertando uma tecla e mostra o texto "UP" quando solto:
+        function down() {
+            // Define a função 'down' que altera o conteúdo da div com id 'status' para "DOWN".
+            document.getElementById("status").innerHTML = "DOWN";
+        }
+
+        function up() {
+            // Define a função 'up' que altera o conteúdo da div com id 'status' para "UP".
+            document.getElementById("status").innerHTML = "UP";
+        }
+    </script>
+
+    Digite algo: <input type="text" id="caixa" onkeydown="down()" onkeyup="up()">
+    <!-- Cria um campo de entrada de texto com id 'caixa'.
+         O evento onkeydown chama a função 'down' quando uma tecla é pressionada.
+         O evento onkeyup chama a função 'up' quando a tecla é solta. -->
+
+    <!-- Identificados Status está aqui ma div -->
+    <div id="status"></div>
+    <!-- Cria uma div com id 'status' onde será exibido o texto "DOWN" ou "UP" baseado nas ações de teclado. -->
+
+</body>
+
+</html>

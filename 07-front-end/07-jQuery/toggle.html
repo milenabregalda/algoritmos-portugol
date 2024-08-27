@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Aula Jquery</title>
+    <!--Estou chamando a bilbioteca do Jquery para dentro do HTML, através de um arquivo externo-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Corrigi a referência ao arquivo jQuery -->
+    <!--Aqui chamo a lib direto do site, sem precisar criar arquivo para o jquery
+        <script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+
+    <script type="text/Javascript">
+        //Crie uma função para, ao clicar no botão esconder e mostrar um parágrafo
+        $(document).ready(function(){
+            //Botão, vocês tem um clique
+            $("#botao").click(function(){
+                //No seletor p, de parágrafo... Mostre e esconta o testo com o Toggle.
+                $("p").toggle();
+            });
+        });            
+    </script>
+</head>
+
+<body>
+    <!--Crio o botão com o input do tipo button; o valor Clique a qui para ver o resultado, é o que aprece dentro do botão. O id que foi usado na função serve para chamar o click-->
+    <input id="botao" type="button" value="Clique aqui para ver o Resultado!" />
+    <p>Parágrafo 1</p>
+    <p>Parágrafo 2</p>
+    <p>Parágrafo 3</p>
+
+</body>
+
+</html>

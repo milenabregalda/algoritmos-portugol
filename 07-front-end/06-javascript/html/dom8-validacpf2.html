@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Validação de CPF</title>
+    <script>
+        function validaCPF(cpf) {
+            // Declara uma função chamada validaCPF que recebe um argumento 'cpf'
+
+            var Soma = 0;
+            var Resto;
+            // Declara duas variáveis: 'Soma' para acumular a soma dos cálculos e 'Resto' para armazenar o resultado das operações de módulo
+
+            var strCPF = String(cpf).replace(/[^\d]/g, '');
+            // Converte o argumento 'cpf' para string, remove todos os caracteres que não são dígitos (ou seja, mantém apenas os números) e armazena o resultado em 'strCPF'
+
+            if (strCPF.length !== 11)
+                return false;
+            // Verifica se o comprimento de 'strCPF' é diferente de 11. Se for, a função retorna 'false', indicando que o CPF é inválido
+
+            if ([
+                '00000000000',
+                '11111111111',
+                '22222222222',
+                '33333333333',
+                '44444444444',
+                '55555555555',
+                '66666666666',
+                '77777777777',
+                '88888888888',
+                '99999999999',
+            ].indexOf(strCPF) !== -1)
+                return false;
+            // Verifica se 'strCPF' é uma sequência de números iguais (ex.: '00000000000'). Se for, a função retorna 'false' pois essas sequências não são CPFs válidos
+
+            for (i = 1; i <= 9; i++)
+                Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (11 - i);
+            // Percorre os primeiros 9 dígitos de 'strCPF' e, para cada dígito, multiplica-o por um peso decrescente de 10 a 2 e acumula o resultado na variável 'Soma'
+
+            Resto = (Soma * 10) % 11;
+            // Calcula o resto da divisão de 'Soma' multiplicado por 10, por 11, e armazena o resultado na variável 'Resto'
+
+            if ((Resto == 10) || (Resto == 11))
+                Resto = 0;
+            // Se 'Resto' for 10 ou 11, ele é redefinido para 0
+
+            if (Resto != parseInt(strCPF.substring(9, 10)))
+                return false;
+            // Verifica se 'Resto' é diferente do 10º dígito de 'strCPF' (dígito verificador). Se for diferente, a função retorna 'false' (CPF inválido)
+
+            Soma = 0;
+            // Zera a variável 'Soma' para o próximo cálculo
+
+            for (i = 1; i <= 10; i++)
+                Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (12 - i);
+            // Percorre os primeiros 10 dígitos de 'strCPF' e, para cada dígito, multiplica-o por um peso decrescente de 11 a 2 e acumula o resultado na variável 'Soma'
+
+            Resto = (Soma * 10) % 11;
+            // Calcula o resto da divisão de 'Soma' multiplicado por 10, por 11, e armazena o resultado na variável 'Resto'
+
+            if ((Resto == 10) || (Resto == 11))
+                Resto = 0;
+            // Se 'Resto' for 10 ou 11, ele é redefinido para 0
+
+            if (Resto != parseInt(strCPF.substring(10, 11)))
+                return false;
+            // Verifica se 'Resto' é diferente do 11º dígito de 'strCPF' (segundo dígito verificador). Se for diferente, a função retorna 'false'
+
+            return true;
+            // Se todas as verificações passarem, a função retorna 'true', indicando que o CPF é válido
+        }
+
+        function validar() {
+            var cpf = document.getElementById("cpf").value;
+            if (validaCPF(cpf)) {
+                alert("CPF válido!");
+            } else {
+                alert("CPF inválido!");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Validação de CPF</h1>
+    <label for="cpf">Digite o CPF:</label>
+    <input type="text" id="cpf" maxlength="11" placeholder="Somente números">
+    <button onclick="validar()">Validar CPF</button>
+</body>
+
+</html>

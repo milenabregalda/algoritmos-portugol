@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Para controlar o layout e a escala da página em dispositivos móveis -->
+    <title>Utilizando eventos no JavaScript</title>
+</head>
+
+<!-- O DOM (Document Object Model) é uma representação hierárquica da estrutura de um documento HTML ou XML.
+    Permite que os scripts possam acessar, manipular e interagir com o conteúdo e a estrutura da página de forma dinâmica (botões, por exemplo).
+-->
+
+<body>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+        style="background-color: blue; width: 120px; height: 20px; padding: 40px;">Passe o mouse em mim
+        <!-- Chama as funções mOver (mouse over) para quando o mouse está no botão e mOut (mouse out) para quando o mouse não está no botão -->
+        <!-- O style para estilizar o botão (os métodos não mudam o estilo, só o conteúdo de texto do botão) -->
+    </div>
+
+    <script>
+        function mOver(obj) { // Dispara quando você traz o mouse sobre qualquer elemento
+            // Utilizando a manipulação do DOM, o innerHTML retorna  todo o texto
+            // innerHTML - para acessar ou modificar o conteúdo HTML interno de um elemento
+            obj.innerHTML = "Obrigado!" // JavaScript não precisa de ponto e vírgula
+        }
+
+        function mOut(obj) { // Dispara quando você mover o mouse para fora daquele elemento
+            obj.innerHTML = "Passe o mouse em mim!"
+        }
+    </script>
+</body>
+
+</html>

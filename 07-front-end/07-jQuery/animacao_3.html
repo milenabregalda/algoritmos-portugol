@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Animações</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Corrigi a referência ao arquivo jQuery -->
+    <script>
+        // Chamei o jQuery e criei a função dentro do head
+        $(document).ready(function () {
+            // Incluí um evento de click dentro do button
+            $("button").click(function () {
+                // Declarei uma variável que recebe div
+                var div = $("div");
+                // A div vai ser aplicada no animate. Ela se moverá 100px para a direita e aumentará o tamanho da fonte para 3em, com velocidade lenta
+                div.animate({ left: '100px', fontSize: '3em' }, "slow");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Crio o botão, com o evento click do jQuery -->
+    <button>Iniciar Animação</button>
+    <br>
+    <br>
+    <!-- Estilizo a apresentação da animação, após o click no botão -->
+    <div style="background: #00FF00; height: 200px; width: 200px; position: absolute;">Hello!</div>
+    <!-- Corrigi o 'position' para 'relative', para que a animação funcione corretamente -->
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Aula Jquery</title>
+    <!--Estou chamando a bilbioteca do Jquery para dentro do HTML, através de um arquivo externo-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Corrigi a referência ao arquivo jQuery -->
+    <!--Aqui chamo a lib direto do site, sem precisar criar arquivo para o jquery
+        <script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000;
+            margin: 20px;
+        }
+    </style>
+    <script type="text/Javascript">
+        //Criei uma função que chama um identidicador botão, com um click.
+        //Ao clicar, devido ao, p:first a cor de fundo muda em função do css atribuído a esse seletor p:first
+        $(document).ready(function(){
+            $("#botao").click(function(){
+                $("p:first").css("background-color", "red");
+            });
+        });            
+    </script>
+</head>
+
+<body>
+    <!--Crio o botão com o input do tipo button, com o valor Crlique a qui para ver o resultado e o id que foi usado na função Jquery-->
+    <input id="botao" type="button" value="Clique aqui para ver o Resultado!" />
+    <p>Parágrafo 1</p>
+    <p>Parágrafo 2</p>
+    <p>Parágrafo 3</p>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Aula Jquery</title>
+    <!--Estou chamando a bilbioteca do Jquery para dentro do HTML, através de um arquivo externo-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Corrigi a referência ao arquivo jQuery -->
+    <!--Aqui chamo a lib direto do site, sem precisar criar arquivo para o jquery
+        <script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+
+    <script type="text/Javascript">
+            //$, chama Jquery. Document carrega o documento na página. Ready Lê esse Document. 
+            $(document).ready(function(){
+                //Alerta vai abrir a caixa de mensagem com essa instrução no novegador.
+                alert("Página Carregada com sucesso!");
+            });        
+        </script>
+</head>
+
+<body>
+    <!--Somento estou chamando tags semânticas para mostrar no corpo do HTNL-->
+    <h1>Página de Demostração!</h1>
+    <h2>Página de Demostração 2!</h2>
+
+</body>
+
+</html>

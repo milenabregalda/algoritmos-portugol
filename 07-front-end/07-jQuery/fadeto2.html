@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<HTML>
+
+<head>
+    <Title>FadeTo</Title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Corrigi a referência ao arquivo jQuery -->
+</head>
+
+<body>
+
+    <!--Criei um button, para aplicar o evento de clique da função Jquery-->
+    <button>Mudança na Opacidade</button>
+    <!--E o paragráfo onde esse efeito será aplicado.-->
+    <p>Esse é um exemplo de parágrafo</p>
+
+    <script>
+        //Criei, através do Jquery um button, com clique
+        $("button").click(function () {
+            //Na função aplico esse click dentro de um parágrafo e uso o fadeTo para inserir um efeito, com velocidade, que são os 1000 milissegundos e opacidade, que são o 0.4.
+            $("p").fadeTo("slow", 0.5); //slow um pouco mais lento           
+        });
+    </script>
+</body>
+
+</HTML>

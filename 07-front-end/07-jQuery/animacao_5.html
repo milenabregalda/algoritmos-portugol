@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Animações</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Corrigi a referência ao arquivo jQuery -->
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                //Chamei no p1 o CSS para inserir a cor azul. slideUp desliza para cima, com velocidade de 2s e o slideDown para baixo, com velocidade de 2s.
+                $("#p1").css("color", "blue").slideUp(1000).slideDown(1000);
+            });
+        });           
+    </script>
+</head>
+
+<body>
+    <!--Chama o seltor de Jquery a partir do identificador id e aplica a animação-->
+    <p id="p1">Animação!</p>
+    <br>
+    <!--O Botão vai receber a ação de um click e aplicar a animação-->
+    <button>Clique Aqui.</button>
+
+</body>
+
+</html>

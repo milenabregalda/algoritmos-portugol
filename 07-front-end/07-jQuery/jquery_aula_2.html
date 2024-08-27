@@ -1,0 +1,34 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Aula Jquery</title>
+    <!--Estou chamando a bilbioteca do Jquery para dentro do HTML, através de um arquivo externo-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Corrigi a referência ao arquivo jQuery -->
+    <!--Aqui chamo a lib direto do site, sem precisar criar arquivo para o jquery
+        <script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+</head>
+
+<body>
+    <div>
+        <h1>Lista de Nomes</h1>
+    </div>
+    <div>
+        <ul style="font-size: 35px;">
+            <li>João</li>
+            <li>Maria</li>
+            <li>Marcos</li>
+            <li>Pedro</li>
+        </ul>
+    </div>
+
+    <button id="btn" onclick="$('H1').append(' de Pessoas')">Clique Aqui!</button>
+    <script>
+        //Neste caso o $, ou cifrão, referencia a bilbioteca Jquery.
+        //O "H1" é a tag do HTML que vai alterar
+        //O append é um método adiciona um texto, dentro do H1
+        //$("H1").append(" de Pessoas")
+    </script>
+</body>
+
+</html>

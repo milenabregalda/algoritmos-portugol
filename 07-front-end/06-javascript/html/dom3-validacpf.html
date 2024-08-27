@@ -1,0 +1,78 @@
+<html>
+<title>Valida CPF</title>
+
+<head>
+    <script language="javascript">
+        // Início do bloco de script JavaScript.
+
+        // Função para verificar e validar o CPF:
+        function VerificaCPF() {
+            // Chama a função vercpf para validar o CPF que foi digitado
+            if (vercpf(document.frmcpf.cpf.value)) {
+                // Se o CPF for válido, submete o formulário
+                document.frmcpf.submit();
+            } else {
+                // Se o CPF não for válido, exibe uma mensagem de erro
+                errors = "1"; // Define a variável errors como "1" para indicar um erro
+                if (errors) alert('CPF NÃO VÁLIDO'); // Exibe uma caixa de alerta com a mensagem 'CPF NÃO VÁLIDO'
+                document.retorno = (errors == ''); // Define o valor da propriedade retorno do documento com base em errors
+            }
+        }
+
+        // Função para validar o CPF:
+        function vercpf(cpf) {
+            // Verifica se o CPF possui exatamente 11 dígitos e não é uma sequência de números iguais
+            if (cpf.length != 11 || cpf == "00000000000" || cpf == "11111111111" || cpf == "22222222222" || cpf == "33333333333" || cpf == "44444444444" || cpf == "55555555555" || cpf == "66666666666" || cpf == "77777777777" || cpf == "88888888888" || cpf == "99999999999")
+                return false; // Retorna falso se o CPF não atender a essas condições
+
+            // Verifica o primeiro dígito verificador do CPF
+            add = 0; // Inicializa a variável para somar os valores
+            for (i = 0; i < 9; i++) // Itera sobre os primeiros 9 dígitos do CPF
+                add += parseInt(cpf.charAt(i)) * (10 - i); // Calcula o valor para o primeiro dígito verificador
+            rev = 11 - (add % 11); // Calcula o dígito verificador esperado
+            if (rev == 10 || rev == 11)
+                rev = 0; // Ajusta o valor se o resultado for 10 ou 11
+            if (rev != parseInt(cpf.charAt(9)))
+                return false; // Retorna falso se o primeiro dígito verificador não corresponder
+
+            // Verifica o segundo dígito verificador do CPF
+            add = 0; // Re-inicializa a variável para a soma
+            for (i = 0; i < 10; i++) // Itera sobre os primeiros 10 dígitos do CPF
+                add += parseInt(cpf.charAt(i)) * (11 - i); // Calcula o valor para o segundo dígito verificador
+            rev = 11 - (add % 11); // Calcula o dígito verificador esperado
+            if (rev == 10 || rev == 11)
+                rev = 0; // Ajusta o valor se o resultado for 10 ou 11
+            if (rev != parseInt(cpf.charAt(10)))
+                return false; // Retorna falso se o segundo dígito verificador não corresponder
+
+            // Se todas as verificações passarem, o CPF é considerado válido
+            alert('O CPF INFORMADO É VÁLIDO.');
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Corpo do documento HTML -->
+    <form name="frmcpf" method="post" onsubmit="VerificaCPF();">
+        <!-- Formulário nomeado "frmcpf", que chama a função VerificaCPF ao ser submetido -->
+        <table width="34%" border="1" cellspacing="0" cellpadding="0" align="center" height="51">
+            <!-- Tabela para organizar o layout do formulário -->
+            <tr>
+                <td>
+                    <div align="center">Informe o CPF:
+                        <!-- Div centralizada contendo o campo de entrada e o botão -->
+                        <input type="text" name="cpf" size="12" maxlength="11">
+                        <!-- Campo de texto para digitar o CPF com tamanho máximo de 11 dígitos -->
+                        <input type="button" name="Submit" value="Checar" onclick="VerificaCPF();">
+                        <!-- Botão que chama a função VerificaCPF ao ser clicado -->
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!-- Comentário indicando um gerador de CPF para testes -->
+        <!-- Gerador de CPF para testes: https://www.4devs.com.br/gerador_de_cpf -->
+    </form>
+</body>
+
+</html>

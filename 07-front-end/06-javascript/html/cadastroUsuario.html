@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <html lang="pt-BR">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <link rel="shortcut icon" type="imagex/png" href="../imagens/icone-loja.png"> <!-- Para adicionar o ícone -->
+  <title>Cadastro de Usuários</title>
+  <style>
+    body {
+      background: white;
+    }
+  </style>
+  <!-- <script language="javascript" type="text/javascript"> alert("Ao realizar o cadastro, verifique se todos os campos foram preenchidos corretamente.")</script> -->
+  <script language="javascript" type="text/javascript"> href = "../js/script.js"</script>
+
+  <!-- Acima JavaScript interno para que, antes de carregar a página, apareça um popup com o texto acima -->
+</head>
+
+<body>
+
+  <!-- https://getbootstrap.com/docs/5.0/components/navbar/#scrolling - Componente "Scrolling" -->
+  <header>
+    <section>
+      <span id="diminuir-fonte"><a title="Diminuir Fonte" alt="Diminuir">A-</a> </span>
+      <span id="aumentar-fonte"><a title="Aumentar Fonte" alt="Aumentar">A+</a></span>
+    </section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand"></a> <!-- Retiramos o texto "Navbar scroll"-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <!-- Abaixo vários tipos de itens para links que podem ser utilizados: -->
+            <!-- A professora modificou um pouco o código e removeu o link desabilitado -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+              <!-- Adicionei os links das páginas do site, removi os "#" para isso -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cadastroUsuario.html">Cadastro de Usuário</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cadastro.html">Entrar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quem-somos.html">Quem Somos</a>
+            </li>
+
+          </ul>
+          <!-- Aria-disabled (que foi apagado): indica aos leitores de tela e outras tecnologias assistivas se um elemento está ou não desativado.
+                      Quando o atributo aria-disabled é definido como true, ele informa aos usuários que o elemento está desativado e não pode ser interagido.
+                      Quando definido como false, indica que o elemento está ativo e pode ser interagido. -->
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Digite aqui sua pesquisa" aria-label="Search">
+            <button class="btn btn-secondary" type="submit">Pesquisar</button>
+            <!-- https://getbootstrap.com/docs/5.0/components/buttons/ -->
+            <!-- Modificamos o botão verde para um dos outros botões pré-definidos do Bootstrap (primário é o azul, secundário é o cinza)-->
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- https://getbootstrap.com/docs/5.0/components/carousel/ - Componente "With controls" -->
+  <nav>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../imagens/loja-roupas.jpg" class="d-block w-100" alt="...">
+          <!-- Coloquei a minha imagem aqui, tirei os alt e os botões como a professora pediu -->
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Representa uma seção de um documento que está marginalmente relacionada ao conteúdo ao redor, como uma barra lateral -->
+  <br><br>
+
+  <aside>
+    <section>
+      <script>
+        // Variável global, devido ao uso de var para inicializar a
+        var a = 5;
+        // Primeira verificação - se a é menor que 6. Caso essa premissa seja falsa, passa para a segunda verificação
+        if (a > 6) {
+          document.writeln("A é maior do que 6 -> " + a);
+          // Segunda verificação - se essa premissa é verdadeira, esta será impressa com o comando document.write na página HTML (primeiro conteúdo em aside, acima de "Cadastro de Usuário")
+        } else if (a < 6) {
+          document.writeln("A é menor do que 6 -> " + a);
+        }
+        else {
+          document.writeln("A é igual a 6");
+        }
+      </script>
+      <script> // No geral seria melhor só ter um script interno, mas exemplos são separados e assim já vi ser usado então deixarei desta forma
+        var a = 5;
+        var b = 10;
+
+        if ((a == 4) || (b == 10)) {
+          document.writeln("\n<br>A premissa é verdadeira! " + a + " e " + b + "<br>");
+          // Br ao invés de \n já que está sendo escrito dentro do documento HTML; eu também poderia ter colocado um br entre os dois scripts
+        } else {
+          document.writeln("\n<br>A premissa é falsa! " + a + " e " + b + "<br>");
+        }
+      </script>
+      <script>
+        /* Exercício 1: utilizando o condicional if, crie um script que verifique se o número é positivo, negativo ou nulo. */
+        num = 10;
+        if (num < 0) {
+          document.writeln("O número " + num + " é negativo."); // Writeln quebra linha, write não
+        } else if (num > 0) {
+          document.writeln("O número " + num + " é positivo.");
+        } else {
+          document.writeln("O número " + num + " é nulo.");
+        }
+      </script>
+      <br>
+      <script>
+        /* Exercício 2 - Crie um script que verifique se um número é par ou ímpar. Imprima o número na tela. */
+        num = 2;
+        if (num % 2 == 0) {
+          document.writeln("O número " + num + " é par.");
+        } else {
+          document.writeln("O número " + num + " é ímpar.");
+        }
+      </script>
+      <br>
+      <script>
+        for (i = 0; i < 2; i++) { // Era 11 não 2, mas diminuí para facilitar a execução
+          alert("Linha: " + i);
+        }
+      </script>
+      <script>
+        for (i = 1; i >= 0; i--) { // Era 15 não 1, mas diminuí para facilitar a execução
+          if (i % 2 == 0) {
+            alert("O número " + i + " é par."); // Alert mostra janela popup quando carrega página
+          } else {
+            alert("O número " + i + " é ímpar.");
+          }
+        }
+      </script>
+      <script>
+        var var1 = 0; // Com o número, é um nome válido para uma variável; precisa inicializar com um número para funcionar
+        while (var1 <= 10) {
+          document.writeln("Linha " + var1);
+          var1++;
+        }
+      </script>
+      <br><br>
+      <script>
+        /* Exercício 3 - Verifique os números primos e múltiplos de 2 e 3 em um loop de repetição tamanho 30 */
+        for (i = 1; i <= 30; i++) {
+          var serPrimo = true; // Começa como verdadeiro, pois se o número da iteração atual do laço passar os testes de não ser número primo, ele é primo mesmo
+
+          if (i <= 1) {
+            serPrimo = false; // Os números menores ou iguais a 1 não são primos
+          } else {
+            for (j = 2; j < i; j++) {
+              if (i % j === 0) { // Se aqui der um resto 0 em algum momento, quer dizer que o número tem um divisor além de 1 e ele mesmo, então não é primo
+                serPrimo = false;
+                break;
+              }
+            }
+          }
+
+          if (serPrimo) { // Utiliza a variável serPrimo e se for verdadeira mostra para o usuário na página HTML que o número é primo
+            document.writeln("O número " + i + " é primo.<br>");
+          } else if (i % 2 === 0 && i % 3 === 0) { // Se o resto da divisão de 2 e 3 é 0, isso quer dizer que o número é múltiplo de 2 e 3
+            document.writeln("O número " + i + " é múltiplo de 2 e 3.<br>");
+          } else if (i % 2 === 0) { // Se o resto da divisão de 2 é 0, isso quer dizer que o número é múltiplo de 2
+            document.writeln("O número " + i + " é múltiplo de 2.<br>");
+          } else if (i % 3 === 0) { // Se o resto da divisão de 3 é 0, isso quer dizer que o número é múltiplo de 3
+            document.writeln("O número " + i + " é múltiplo de 3.<br>");
+          }
+        }
+      </script>
+      <script>
+        var myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        myArray.forEach(function (value, key) {
+          document.writeln(value, key);
+        });
+      </script>
+      <br>
+      <br>
+      <script>
+        /* Exercício 4 - Usando JavaScript crie três arrays:
+          1 - Com 5 nomes de pessoas no primeiro;
+          2 - Com 10 números aleatórios no segundo;
+          3 - Com 1 imagens  no terceiro (não mais em cada Array);
+        */
+        var arrayPessoas = ["Morgana", "Arthur", "Maria", "Eliza", "Fernando"];
+        var arrayNumerosAleatorios = [17, 43, 8, 29, 62, 11, 53, 77, 4, 36];
+        var arrayImagem = ["../imagens/batons.jpg"];
+
+        document.writeln("Nomes das pessoas do array:<br>");
+        for (i = 0; i < arrayPessoas.length; i++) { // Length para pegar o tamanho do array, caso ele mude
+          document.writeln(arrayPessoas[i] + "<br>");
+        }
+        document.writeln("<br>");
+
+        document.writeln("Números aleatórios do array:<br>");
+        for (i = 0; i < arrayNumerosAleatorios.length; i++) {
+          document.writeln(arrayNumerosAleatorios[i] + "<br>");
+        }
+
+        // Imagem não funcionou
+        document.writeln("<br>Imagem:<br>");
+        for (i = 0; i < arrayImagem.length; i++) {
+          document.writeln('<img src="' + arrayImagem[i] + '" alt="Imagem" height="100px" width="140px"/><br>');
+        }
+      </script>
+      <br><br>
+    </section>
+
+    <form>
+      <p>Cadastro de Usuário</p>
+      <div class="form-group">
+        <label for="">Nome completo</label>
+        <input type="text" class="form-control" id="" placeholder="Seu nome completo">
+        <small id="" class="form-text text-muted">Nunca compartilharemos os seus dados com ninguém.</small>
+      </div>
+      <div class="form-group">
+        <label for="">Data de Nascimento</label>
+        <input type="date" class="form-control" id="" placeholder="Selecione sua data de nascimento">
+      </div>
+      <div class="form-group">
+        <label for="">Endereço</label>
+        <input type="text" class="form-control" id="" placeholder="Seu endereço">
+      </div>
+
+      <div class="form-group">
+        <label for="">Telefone</label>
+        <input type="phone" class="form-control" id="" placeholder="Seu telefone">
+      </div>
+
+      <div class="form-group">
+        <label for="">CPF</label>
+        <input type="text" class="form-control" id="" placeholder="Seu CPF">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Endereço de e-mail</label>
+        <input type="email" class="form-control" id="email" placeholder="Seu e-mail" aria-describedby="email">
+        <small id="email" class="form-text text-muted">Nunca compartilharemos o seu e-mail com ninguém.</small>
+      </div>
+      <div class="form-group">
+        <label for="password">Senha</label>
+        <input type="password" class="form-control" id="password" placeholder="Senha">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Clique em mim</label>
+      </div><br>
+      <button type="submit" class="btn btn-secondary">Enviar</button>
+      <button type="reset" class="btn btn-secondary">Limpar</button>
+
+    </form>
+  </aside>
+
+  <br>
+  <br>
+  <footer class="footer">
+    <!-- Div: Elemento HTML usado para agrupar e organizar conteúdo na página -->
+    <div class="left">
+      <!-- Span: para agrupar elementos dentro de um bloco de texto para aplicar estilos
+                        ou manipular esses elementos com JavaScript (aqui não funcionou, por algum motivo, então a professora usou div class) -->
+      <!-- Antigo: <div class="span">Front-end -->
+      <h4 class="footer-title">Bem vindo ao site!</h4>
+      <br>
+      <table>
+        <tr>
+          <td>
+            <!-- Para colocar ícone ao invés de palavra em links: -->
+            <p class="links">
+              <a href="../HTML/home.html" title="Home">Home</a><br>
+              <a href="../HTML/index.html" title="Produtos">Produtos</a><br>
+              <a href="../HTML/cadastroUsuario.html" title="Cadastro">Cadastro de Usuário</a><br>
+              <a href="../HTML/cadastro.html" title="Entrar">Entrar</a><br>
+              <a href="../HTML/quem-somos.html" title="Quem Somos">Quem Somos</a>
+            </p>
+          </td>
+          <td>
+            <p class="footer-text">Endereço: Av. Assis Brasil, 5213.</p><br>
+            <p class="footer-text">Fone: (51)3364-7896</p><br>
+            <p class="footer-text">loja@gmail.com</p>
+          </td>
+          <td>
+            <h4 class="right">Redes Sociais</h4>
+            <div class="right">
+              <!-- Para colocar ícone ao invés de palavra em links: -->
+              <p class="links">
+                <a href="https://www.facebook.com"></a><img src="../imagens/icone-facebook.png" width="50px"
+                  height="50px">
+                <a href="https://www.instagram.com"></a><img src="../imagens/icone-instagram.png" width="50px"
+                  height="50px"><br>
+              </p>
+            </div>
+    </div>
+    </td>
+    </tr>
+    </table>
+    <br>
+    <p class="Copyright">Copyright &copy; 2024 Seu site - Todos os Direitos Reservados.</p>
+  </footer>
+  <!-- VLIBRAS: até a parte de script para adicionar acessibilidade para traduzir textos escritos para Libras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <!-- JS DO VLIBRAS -->
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <!-- FIM DO VLIBRAS -->
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,52 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Aula Jquery</title>
+    <!--Estou chamando a bilbioteca do Jquery para dentro do HTML, através de um arquivo externo-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Corrigi a referência ao arquivo jQuery -->
+    <!--Aqui chamo a lib direto do site, sem precisar criar arquivo para o jquery
+        <script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+</head>
+
+<body>
+    <div>
+        <h1>Lista de Nomes</h1>
+    </div>
+    <div>
+        <ul style="font-size: 35px;">
+            <li>João</li>
+            <li>Maria</li>
+            <li>Marcos</li>
+            <li>Pedro</li>
+        </ul>
+    </div>
+
+    <button id="btn">Clique Aqui!</button>
+    <script>
+        //Neste caso o $, ou cifrão, referencia a bilbioteca Jquery.
+        //O #btn é o identificador do botão
+        //on é o método do click
+        //Dentro dos parenteses temos o Click
+        //A vírgula, chama a função que na verdade é botao
+        $('#btn').on("click", botao)
+        //Crio a função com nome botao
+        function botao() {
+            //Chamei o jquery via $
+            //Chamei a tag li, que é onde vei ser aplicado o CSS
+            //"." css, com o novo estilo a ser aplicado ao clicar no botão
+            $('li').css({
+                'color': 'blue'
+            })
+            //Chamei o jquery via $
+            //Chamei a tag H1, que é onde vei ser aplicado o CSS
+            //"." css, com o novo estilo a ser aplicado ao clicar no botão
+            $('H1').css({
+                'color': 'orange'
+            })
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Aula Jquery</title>
+    <!--Estou chamando a bilbioteca do Jquery para dentro do HTML, através de um arquivo externo-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Corrigi a referência ao arquivo jQuery -->
+    <!--Aqui chamo a lib direto do site, sem precisar criar arquivo para o jquery
+        <script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+    <!--Criei um estilo para o display. O none esconde-->
+    <style type="text/css">
+        .escondido {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Criei um H1 para apresentar um cabeçalho grande-->
+    <h1>Exemplos - Seletores</h1>
+    <br>
+    <!--Criei a div para identidicar seletores e chamar as tags do HTML no Jquery-->
+    <div id="menu">
+        <a href="">Home</a> |
+        <a href="">Artigos</a> |
+        <a href="">Contato</a>
+    </div>
+    <script type="text/Javascript">
+        //Crio uma função simples, onde chamo os seletores todos juntos, dentro das aspas por se tratar de agrupamento de seletores. Crio uma estilização para o css, utilizando objeto, já que criano estilo para o tipo de fonte, o alinhamento do texto e a cor do texto.
+            $("a, #menu, h1").css({
+                fontFamily:"verdana",
+                textAlign:"center",
+                color: "orange"
+            });             
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Aula de 15/07/2024 - Introdução ao CSS (Cascading Style Sheets) -->
+<!-- Aula de 16/07/2024 - HTML formulário (novas tags em cadastro.html) -->
+<!-- Aula de 17/07/2024 - Mais tipos de formulário e CSS -->
+<!-- Aula de 18/07/2024 - Continuação de CSS (reformulando home.html e styles.css) -->
+<!-- Aula de 22/07/2024 - Continuação de CSS (reformulando imagens e adicionando rodapé em home.html) -->
+<!-- Aula de 23/07/2024 - Continuação de CSS (continuando no rodapé de home.html) -->
+
+<head>
+    <html lang="pt-BR"> <!-- A professora deixou aqui -->
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+    <!-- CSS interno: -->
+    <style>
+        body {
+            background: #d7e791;
+            /* Define cor do plano de fundo (customizada em hexadecimal) */
+            color: darksalmon;
+            /* Define cor do texto (por nome, pode por hexadecimal também) */
+            margin-top: 20%;
+            /* Define porcentagem da margem de cima, os debaixo é a mesma coisa para outras partes */
+            margin-bottom: 10%;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+
+        h1 {
+            /* Chama o seletor */
+            /* Chama os estilos a serem aplicados naquele seletor: */
+            font-size: x-large;
+            /* Representa um tamanho de fonte absoluto que é 50% maior do que o tamanho médio padrão */
+            font-style: oblique;
+            /* Similar ao itálico */
+            position: absolute;
+            /* Posição absoluta em relação ao seu ancestral posicionado (body) */
+            border-inline-color: inherit;
+            /* Herda a cor de texto lá do body (darksalmon) */
+        }
+    </style>
+</head>
+
+<body>
+    <p style="font-size: 20px; font-family:'Times New Roman', Times, serif; font-style: italic;">Hoje é segunda-feira,
+        mas não está tão frio assim.</p>
+    <!-- CSS inline: define tamanho da fonte, família de fontes (se navegador não tem uma fonte, mostra uma das outras que são parecidas), estilo itálico -->
+
+    <!-- Exercício 1: criar três parágrafos e definir estilo deles -->
+    <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: green">Este é o
+        primeiro parágrafo.</p>
+    <!-- A fonte que estiver em primeiro lugar vai ser a primeira que o navegador vai tentar mostrar -->
+    <p
+        style="font-size: 40px; font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-style: italic; color: blue">
+        Este é o segundo parágrafo.</p>
+    <p
+        style="font-size: 50px; font-family: Times, 'Times New Roman', serif; text-decoration: line-through; color: gray">
+        Este é o terceiro parágrafo.</p>
+    <br>
+    <h1><br>Hoje o dia está lindo</h1>
+
+    <!-- Exercício 2 no arquivo exercicio2.html -->
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Aula Jquery</title>
+    <!--Estou chamando a bilbioteca do Jquery para dentro do HTML, através de um arquivo externo-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Corrigi a referência ao arquivo jQuery -->
+    <!--Aqui chamo a lib direto do site, sem precisar criar arquivo para o jquery
+        <script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+</head>
+
+<body>
+
+    <!--Chamo input, com tipo botão, chamo o onclick, que recebe a função -->
+    <input type="button" onclick="mostraParagrafo()" value="exibe paragrafo" />
+
+    <!--Dentro do seletor chamo a classe para aplicar a função escondido-->
+    <p class="escondido">Parágrafo 1</p>
+    <p class="escondido">Parágrafo 2</p>
+    <p class="escondido">Parágrafo 3</p>
+
+    <script>
+        //A função mostraParagrafo() mostra um parágrafo com slidedown que aplica efeito deslizante. Slow é apresenta este efeito de forma mais lenta. Chamo Jquery com hide para esconder os paragrafos e slideDown para mostrar
+        $(".escondido").hide();
+        function mostraParagrafo() {
+            $(".escondido").slideDown("slow");
+
+        }            
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Aula Jquery</title>
+    <!--Estou chamando a bilbioteca do Jquery para dentro do HTML, através de um arquivo externo-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Corrigi a referência ao arquivo jQuery -->
+    <!--Aqui chamo a lib direto do site, sem precisar criar arquivo para o jquery
+        <script type="text/Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+</head>
+
+<body>
+    <h1>Olá Jquery!</h1>
+
+    <p>Esta é uma página usando o Jquery.</p>
+    <p>Dá para fazer muitas coisas legais com Jquery.</p>
+    <p>Então preste atenção.</p>
+
+    <!--O onclick clama a função esconderComJquery que esconde os parágrafos-->
+    <button onclick="esconderComJquery()">Clique para Esconder o Texto!</button>
+    <script>
+        //Cria a função para esconder textos dentro da tag "p"
+        function esconderComJquery() {
+            //O $ determina o uso do Jquery
+            //O p e o H1 são tag que podem ser chamadas juntas, dentro dos parenteses e submetidas ao método "hide"
+            //O método "hide" esconde as tags "p"
+            $("p, H1").hide()
+        }            
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de HTML</title>
+</head>
+
+<body>
+    <!-- Uma arrow function é uma maneira curta e moderna de escrever funções em JavaScript.
+        Ela usa a sintaxe => (uma seta) para definir a função. É útil para simplificar o código, especialmente em funções curtas. -->
+    <script>
+        const imprimirNumerosAleatorios = () => { // Arrow/seta aqui
+            for (let i = 0; i < 10; i++) {
+                let numeroAleatorio = (Math.random() * 100).toFixed(2);
+                // toFixed para que não fique um número muito grande e * 100 para mais variedade de números (antes era 0 alguma coisa)
+                document.writeln("Número " + i + ": " + numeroAleatorio + "<br><br>");
+            }
+        };
+
+        imprimirNumerosAleatorios();
+    </script>
+
+</body>
+
+</html>

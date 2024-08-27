@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Barra de Rolagem</title>
+    <meta charser="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Corrigi a referência ao arquivo jQuery -->
+    <script>
+        //Inicializo uma variável x com 0. Essa variável será utilizada na função.
+        var x = 0;
+        $(document).ready(function () {
+            //Chamo, via Jquery o seletor da div e a barra de rolagem com o método scroll.
+            $("div").scroll(function () {
+                //Chamo no Jquery o span que vai contar o movimento do scroll.
+                $("span").text(x += 1);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <!--Crio o estilo na div, utilizada na função Jquery e chamo overflow para especificar o uso do scroll ou barra de rolagem.-->
+    <div style="border: 1px solid #000; width: 200px; height: 150px; overflow: scroll;">'Jquery, Jquery, Jquery, Jquery,
+        Jquery, Jquery, Jquery, Jquery, Jquery, Jquery, Jquery, Jquery, Jquery, Jquery, Jquery, Jquery.'<br><br>
+        'Jquery, Jquery, Jquery, Jquery, Jquery, Jquery, Jquery, Jquery, Jquery, Jquery, Jquery, Jquery, Jquery, Jquery,
+        Jquery, Jquery.'
+    </div>
+    <!--Aqui chamamos o span para fazer a verificação do sobe e desce do scroll.-->
+    <p>Barra de Rolagem <span>0</span></p>
+</body>
+
+</html>

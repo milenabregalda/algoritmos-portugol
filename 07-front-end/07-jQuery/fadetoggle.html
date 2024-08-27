@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<HTML>
+
+<head>
+    <Title>FadeTo</Title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Corrigi a referência ao arquivo jQuery -->
+</head>
+
+<body>
+    <p>Demostração de FadeToggle, com uso de Div.</p><br>
+    <!--Criei um button, para aplicar o evento de clique da função Jquery-->
+    <button>Mudança na Apresentação</button><br><br>
+    <!--Aplico o fadetoggle com velocidade e opacidade dentro desta divs. Criei um estilo para vermos o compartamento de cada uma.-->
+    <div id="div1" style="width:80px; height: 80px; background-color: blue;"></div><br><br>
+    <div id="div2" style="width: 80px; height: 80px; background-color: red ;"></div><br><br>
+    <div id="div3" style="width: 80px; height: 80px; background-color: orange;"></div><br>
+
+    <script>
+        //Criei, através do Jquery um button, com clique
+        $("button").click(function () {
+            //Chamei fadeToggle para esconder e apresentar a div sem velocidade, por isso o desaparecimento dessa div ocorrerá instantaneamente.
+            $("#div1").fadeToggle();
+            //Chamei fadetoggle para esconder e presentar a div de forma mais lenta
+            $("#div2").fadeToggle("slow");
+            //Chamei fadetoggle para esconder e apresentar a div em 4s
+            $("#div3").fadeToggle(4000);
+        });
+
+    </script>
+</body>
+
+</HTML>

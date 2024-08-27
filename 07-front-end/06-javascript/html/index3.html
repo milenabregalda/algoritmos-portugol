@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Aula de 15/07/2024 - Introdução ao CSS (Cascading Style Sheets) -->
+<!-- Aula de 16/07/2024 - HTML formulário (novas tags em cadastro.html) -->
+<!-- Aula de 17/07/2024 - Mais tipos de formulário e CSS -->
+<!-- Aula de 18/07/2024 - Continuação de CSS (reformulando home.html e styles.css) -->
+<!-- Aula de 22/07/2024 - Continuação de CSS (reformulando imagens e adicionando rodapé em home.html) -->
+<!-- Aula de 23/07/2024 a 25/07/2027 - Continuação de CSS (continuando no rodapé de home.html) -->
+<!-- Aula de 29/07/2024 - Introdução ao framework Bootstrap -->
+<!-- Aula de 30/07/2024 - Continuação do Bootstrap -->
+<!-- Aula de 31/07/2024 - Continuação do Bootstrap (cards) -->
+<!-- Aula de 01 e 02/08/2024 - Aulas finais de Bootstrap -->
+
+
+<head>
+  <html lang="pt-BR"> <!-- A professora deixou aqui -->
+  <meta charset="UTF-8">
+  <!-- Abaixo para chamar o Bootstrap (o CSS pode ficar junto também): -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <link rel="shortcut icon" type="imagex/png" href="../imagens/icone-loja.png"> <!-- Para adicionar o ícone -->
+  <title>Loja Online</title>
+  <!-- CSS interno: -->
+  <style>
+    body {
+      background: white;
+      /* Define cor do plano de fundo (customizada em hexadecimal) */
+      color: darksalmon;
+      /* Define cor do texto (por nome, pode por hexadecimal também) */
+      /*margin-top: 20%; Define porcentagem da margem de cima, os debaixo é a mesma coisa para outras partes 
+                margin-bottom: 10%;
+                margin-left: 15%;
+                margin-right: 15%;*/
+    }
+
+    h1 {
+      /* Chama o seletor */
+      /* Chama os estilos a serem aplicados naquele seletor: */
+      font-size: x-large;
+      /* Representa um tamanho de fonte absoluto que é 50% maior do que o tamanho médio padrão */
+      font-style: oblique;
+      /* Similar ao itálico */
+      position: absolute;
+      /* Posição absoluta em relação ao seu ancestral posicionado (body) */
+      border-inline-color: inherit;
+      /* Herda a cor de texto lá do body (darksalmon) */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- https://getbootstrap.com/docs/5.0/components/navbar/#scrolling - Componente "Scrolling" -->
+  <header>
+    <span id="topo"></span>
+    <section>
+      <span id="diminuir-fonte"><a title="Diminuir Fonte" alt="Diminuir">A-</a> </span>
+      <span id="aumentar-fonte"><a title="Aumentar Fonte" alt="Aumentar">A+</a></span>
+    </section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand"></a> <!-- Retiramos o texto "Navbar scroll"-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <!-- Abaixo vários tipos de itens para links que podem ser utilizados: -->
+            <!-- A professora modificou um pouco o código e removeu o link desabilitado -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+              <!-- Adicionei os links das páginas do site, removi os "#" para isso -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cadastroUsuario.html">Cadastro de Usuário</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cadastro.html">Entrar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quem-somos.html">Quem Somos</a>
+            </li>
+
+          </ul>
+          <!-- Aria-disabled (que foi apagado): indica aos leitores de tela e outras tecnologias assistivas se um elemento está ou não desativado.
+                        Quando o atributo aria-disabled é definido como true, ele informa aos usuários que o elemento está desativado e não pode ser interagido.
+                        Quando definido como false, indica que o elemento está ativo e pode ser interagido. -->
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Digite aqui sua pesquisa" aria-label="Search">
+            <button class="btn btn-secondary" type="submit">Pesquisar</button>
+            <!-- https://getbootstrap.com/docs/5.0/components/buttons/ -->
+            <!-- Modificamos o botão verde para um dos outros botões pré-definidos do Bootstrap (primário é o azul, secundário é o cinza)-->
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--<a href="cadastro.html" style="text-align: justify; padding-inline: 150px;">Cadastrar</a>
+        <a href="cadastro.html" style="text-align: justify; padding-inline: 150px;">Entrar</a>-->
+
+
+  <nav class="botoes">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../imagens/loja-roupas.jpg" class="d-block w-100" alt="...">
+          <!-- Coloquei a minha imagem aqui, tirei os alt e os botões como a professora pediu -->
+        </div>
+      </div>
+  </nav>
+  <!-- Representa uma seção de um documento que está marginalmente relacionada ao conteúdo ao redor, como uma barra lateral -->
+  <br><br>
+
+  <aside>
+    <br>
+
+    <!-- https://getbootstrap.com/docs/5.0/components/card/ - Componente Card (o primeiro exemplo) -->
+    <p><strong>Lista de produtos</strong></p>
+    <br>
+    <div class="row"> <!-- Para que os cards fiquem um ao lado do outro, ao invés de um embaixo do outro -->
+      <!-- Se quisesse que menos imagens ficassem em cada linha, poderia fazer uma row por linha -->
+
+      <!-- https://picsum.photos/ -->
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://picsum.photos/501/341" class="card-img-top" alt="Imagem da capa do card">
+        <div class="card-body">
+          <h5 class="card-title">Quadro</h5>
+          <p class="card-text">Quadro por apenas R$ 49,99.</p>
+          <a href="#" class="btn btn-secondary">Visitar</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://picsum.photos/503/342" class="card-img-top" alt="Imagem da capa do card">
+        <div class="card-body">
+          <h5 class="card-title">Quadro</h5>
+          <p class="card-text">Quadro por apenas R$ 49,99.</p>
+          <a href="#" class="btn btn-secondary">Visitar</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://picsum.photos/503/343" class="card-img-top" alt="Imagem da capa do card">
+        <div class="card-body">
+          <h5 class="card-title">Quadro</h5>
+          <p class="card-text">Quadro por apenas R$ 49,99.</p>
+          <a href="#" class="btn btn-secondary">Visitar</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- <br><br><br><br><br>
+            <p style="font-size: 20px; font-family:'Times New Roman', Times, serif; font-style: italic;">Hoje é segunda-feira, mas não está tão frio assim.</p> -->
+    <!-- CSS inline: define tamanho da fonte, família de fontes (se navegador não tem uma fonte, mostra uma das outras que são parecidas), estilo itálico -->
+
+    <!-- Exercício 1: criar três parágrafos e definir estilo deles -->
+    <!-- <p style="font-size: 30px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: green">Este é o primeiro parágrafo.</p> -->
+    <!-- A fonte que estiver em primeiro lugar vai ser a primeira que o navegador vai tentar mostrar -->
+    <!-- <p style="font-size: 40px; font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; font-style: italic; color: blue">Este é o segundo parágrafo.</p>
+            <p style="font-size: 50px; font-family: Times, 'Times New Roman', serif; text-decoration: line-through; color: gray">Este é o terceiro parágrafo.</p>
+            <br>
+            <h1><br>Hoje o dia está lindo</h1> -->
+
+    <br><br>
+    <!-- https://getbootstrap.com/docs/5.0/components/pagination/ - Componente Pagination (o primeiro)-->
+    <nav aria-label="Navegação de página exemplo">
+      <ul class="pagination"> <!-- Editado por CSS para ficar à direita -->
+        <li class="page-item"><a class="btn btn-outline-secondary" href="#">&lt;&lt</a></li>
+        <li class="page-item"><a class="btn btn-outline-secondary" href="../html/index.html">1</a></li>
+        <li class="page-item"><a class="btn btn-outline-secondary" href="../html/index2.html">2</a></li>
+        <li class="page-item"><a class="btn btn-outline-secondary" href="../html/index3.html">3</a></li>
+        <li class="page-item"><a class="btn btn-outline-secondary" href="#">&gt&gt</a></li>
+      </ul>
+      <br>
+    </nav>
+  </aside>
+  <br>
+
+  <!-- Exercício 2 no arquivo exercicio2.html -->
+
+  <footer class="footer">
+    <!-- Div: Elemento HTML usado para agrupar e organizar conteúdo na página -->
+    <div class="left">
+      <!-- Span: para agrupar elementos dentro de um bloco de texto para aplicar estilos
+                        ou manipular esses elementos com JavaScript (aqui não funcionou, por algum motivo, então a professora usou div class) -->
+      <!-- Antigo: <div class="span">Front-end -->
+      <h4 class="footer-title">Bem vindo ao site!</h4>
+      <br>
+      <table>
+        <tr>
+          <td>
+            <!-- Para colocar ícone ao invés de palavra em links: -->
+            <p class="links">
+              <a href="../HTML/home.html" title="Home">Home</a><br>
+              <a href="../HTML/index.html" title="Produtos">Produtos</a><br>
+              <a href="../HTML/cadastroUsuario.html" title="Cadastro">Cadastro de Usuário</a><br>
+              <a href="../HTML/cadastro.html" title="Entrar">Entrar</a><br>
+              <a href="../HTML/quem-somos.html" title="Quem Somos">Quem Somos</a>
+            </p>
+          </td>
+          <td>
+            <p class="footer-text">Endereço: Av. Assis Brasil, 5213.</p><br>
+            <p class="footer-text">Fone: (51)3364-7896</p><br>
+            <p class="footer-text">loja@gmail.com</p>
+          </td>
+          <td>
+            <h4 class="right">Redes Sociais</h4>
+            <div class="right">
+              <!-- Para colocar ícone ao invés de palavra em links: -->
+              <p class="links">
+                <a href="https://www.facebook.com"></a><img src="../imagens/icone-facebook.png" width="50px"
+                  height="50px">
+                <a href="https://www.instagram.com"></a><img src="../imagens/icone-instagram.png" width="50px"
+                  height="50px"><br>
+              </p>
+            </div>
+    </div>
+    </td>
+    </tr>
+    </table>
+    <br>
+    <p class="Copyright">Copyright &copy; 2024 Seu site - Todos os Direitos Reservados.</p>
+  </footer>
+  <!-- VLIBRAS: até a parte de script para adicionar acessibilidade para traduzir textos escritos para Libras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <!-- JS DO VLIBRAS -->
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <!-- FIM DO VLIBRAS -->
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,413 @@
+/*Zerando as configurações de margem interna e externa*/
+* {
+    /* Aplica em toda a folha HTML - zerando as configurações de margem interna e externa */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: white;
+    text-align: center;
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+/*.card { - Antigo
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}*/
+
+.card {
+    margin-right: 1%;
+    margin-bottom: 1%;
+    padding: 0.7%;
+}
+
+.pagination {
+    float: right;
+    margin-bottom: 15px;
+}
+
+.linhaDeInput {
+    display: grid;
+    /* Para colocar um abaixo do outro */
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: 0;
+    /* Para tirar a borda quando recebe o focus - quando input fica esperando o próximo cadastro */
+}
+
+#btn1,
+#btn2 {
+    border: 0;
+    padding: 10px;
+    outline: 0;
+    background-color: blueviolet;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all ease 0.5s;
+    /* Para criar animação suave quando as propriedades do CSS mudam */
+}
+
+#btn1:hover,
+#btn2:hover {
+    background-color: rgb(106, 137, 221);
+}
+
+.conteudo {
+    margin-top: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th {
+    background-color: rgb(214, 214, 214);
+    border: none;
+}
+
+table th,
+td {
+    padding: 1px 5px;
+    text-align: left;
+}
+
+#foto {
+    border: 1px solid gray;
+    width: 300px;
+    height: 240px;
+    float: right;
+    margin-left: 10px;
+}
+
+#imgFoto {
+    width: 270px;
+    height: 240px;
+    margin-left: 15px;
+}
+
+table td img {
+    width: 22px;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+#banner {
+    /* Pelo id, hashtag */
+    display: flex;
+    /* Deixa flexível o espaço nesse contêiner (banner para Flexbox) */
+    margin: auto;
+    margin-bottom: 0;
+    width: 25%;
+    height: 250px;
+    border: 1px solid #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    /* Ao invés de align, usar este aqui */
+}
+
+#botoes {
+    display: flex;
+    height: 100%;
+    width: 200%;
+    margin: auto;
+    margin-bottom: 0;
+    justify-content: center;
+}
+
+#btnAnte,
+#btnProx {
+    line-height: 200px;
+    font-size: 30px;
+    color: rgba(0, 0, 0, .5);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btnAnte {
+    float: left;
+}
+
+#btnProx {
+    float: right;
+}
+
+ul li {
+    /*display: inline;
+    margin-bottom: 0;*/
+}
+
+.titulo {
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    height: 30px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.conteudoCard {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0px 0px 5px 5px;
+    text-align: center;
+}
+
+/* img {
+    width: 100px;
+} */
+
+.container-child {
+    margin-top: 20px;
+}
+
+.img-carrinho {
+    width: 45px;
+}
+
+/* -- Define os atributos da lista principal conforme estados diferentes dela (normal, se tem mouse em cima dela, etc.): */
+.lista_principal {
+    list-style: none;
+    font-family: 'Courier New', Courier, monospace;
+    float: left;
+    /* Alinha elemento à esquerda */
+}
+
+.lista_principal li {
+    position: relative;
+    /* Permite mover o elemento a partir de sua posição original no layout, usando top, right, bottom, e left,
+    mas o espaço que ele ocupa no layout original é mantido.*/
+    float: left;
+    padding: 10px 10px;
+    display: block;
+    background-color: rgb(240, 237, 236);
+    /* background-color: lightsalmon; */
+    border: 2px solid whitesmoke;
+}
+
+.lista_principal li:hover,
+ul li .sublista li:hover {
+    border: 2px solid white;
+    background-color: rgb(133, 158, 226);
+    /* background-color: crimson; */
+    color: white;
+    /* Essa é a cor do texto */
+}
+
+.lista_principal li .sublista {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    display: none;
+}
+
+.footer-text {
+    color: #fff;
+    padding: 1px;
+}
+
+.lista_principal li:hover .sublista {
+    display: block;
+    z-index: 1;
+}
+
+.lista_principal li .sublista li {
+    background-color: rgb(186, 197, 197);
+    /* background-color: lightseagreen; */
+    border: 1px solid white;
+    width: 150px;
+    display: block;
+}
+
+.menu ul {
+    /* Para manipular a lista ordenada do menu */
+    margin: 0px;
+    /* Só margin define para os 4 lados igualmente, específico right left etc., como antes */
+    padding: 0px;
+    /* Espaçamento entre linhas - só padding pros 4 lados, específico right left etc. */
+    list-style-type: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.menu ul li a {
+    /* Para manipular os itens da lista ordenada no menu, a é dos links */
+    padding: 10px 20px;
+    /* Altura e largura juntos (dá pra definir os 4 de uma vez também) */
+    text-decoration: none;
+    margin-bottom: 5px;
+    border: rgb(13, 13, 15), 1px solid;
+    /* Define que a borda é dessa cor, desse tamanho e tipo de borda (sólida) */
+    border-bottom: 3px, solid, rgb(243, 237, 235);
+}
+
+.menu ul li a:active {
+    background-color: silver;
+    border-bottom: rgb(190, 201, 233) 3px solid;
+}
+
+aside {
+    margin-top: 1px;
+    margin-bottom: 2%;
+    margin-left: 10px;
+    /* Espaçamento fora */
+    margin-right: 10px;
+    padding: 0.5px;
+    /* Espaçamento dentro */
+    /*color:rgb(252, 252, 252);*/
+    color: black;
+    /*background-color: rgb(224, 238, 161);*/
+    background-color: rgb(240, 240, 240);
+    padding: 1.2%;
+    padding-bottom: 4%;
+}
+
+body {
+    background-color: rgb(237, 243, 209);
+}
+
+footer {
+    background-color: rgb(5, 5, 5);
+    width: 99%;
+    height: 99%;
+    float: left;
+    font-size: 20px;
+    padding: 20px 10px 20px 10px;
+}
+
+.footer-title {
+    /* Para mexer no título do footer */
+    color: #ccc;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    font-size: 20px;
+    width: 100%;
+    float: left;
+    margin-bottom: 11px;
+}
+
+#diminuir-fonte {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+
+#aumentar-fonte {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+
+.footer .left {
+    width: 100%;
+    float: left;
+    border-right: 0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+#grupo {
+    text-align: right;
+}
+
+#topo {
+    margin-right: 1%;
+    text-align: right;
+}
+
+.container-left {
+    text-align: left;
+    margin-left: 0;
+    /* Remove qualquer margem esquerda */
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.footer .footer-title .span {
+    /* Para só mexer o span do título */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.footer .links {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+    color: navy;
+}
+
+.footer .links a {
+    /* Estilos para os links dentro de .footer .links - é aqui que fiz */
+    display: inline-block;
+    /* Para que ícones fiquem um ao lado do outro */
+    /* display: block faz o elemento ocupar toda a largura disponível e começar em uma nova linha,
+    enquanto display: inline-block permite definir largura e altura, mas não força uma nova linha */
+    line-height: 20px;
+    text-decoration: none;
+    /* Remove o sublinhado padrão */
+    color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+.footer .right {
+    width: 100%;
+    float: left;
+    margin-right: auto;
+    text-align: right;
+    color: #fff;
+    border-right: 0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+/* Para que as imagens fiquem no tamanho e na proporção correta */
+.footer .right .links img {
+    width: 40px;
+    height: 40px;
+}
+
+.Copyright {
+    /* .footer .Copyright não estava pegando */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    text-align: center;
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* Exercício: redimensionar imagens */
+.lista_imagens img {
+    /* Além de chamar o nome da classe, também tem que colocar o tipo do que vai mexer (img), assim como o li lá em "lista_principal li" */
+    height: 200px;
+    width: 300px;
+}

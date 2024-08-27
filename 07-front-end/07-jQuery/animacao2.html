@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<HTML>
+
+<head>
+    <Title>FadeTo</Title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Corrigi a referência ao arquivo jQuery -->
+    <!--Criamos um script com animação e inserimos uma estilização para a animação. Quanto trato $(document).ready(function (){}), este script deve se inserido no head -->
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").animate({
+                    left: '250px',
+                    opacity: 0.15,
+                    transition: "500ms",
+                    height: '150px',
+                    width: '150px',
+                });
+            });
+        });            
+    </script>
+</head>
+
+<Body>
+    <!--Criei o botão que recebe o evento de click-->
+    <button>Iniciar Animação</button>
+
+    <!--Criei um parágrafo bem grande-->
+    <p> Animações são muito interessantes. Por padrão, todos os elementos do HTML possuem posições estáticas, ou seja,
+        não se movem. Para manipilar a posição, primeiro preciso verificar a propriedade position. Se relative, se fixed
+        ou absolute.</p>
+
+    <!--Na div estilizei para que a animação possa ser verificada.-->
+    <div style="background-color: #986f21; height: 100px; width: 100px; position: fixed;"></div>
+</Body>
+
+</HTML>
