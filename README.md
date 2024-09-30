@@ -31,3 +31,8 @@ Este repositório contém materiais de estudo do curso Técnico em Desenvolvimen
 7. **Desenvolvimento Web Front-end**
    - **Tecnologias**: HTML, CSS, Bootstrap, JavaScript e JQuery;
    - **Descrição**: Criação de soluções web para Front-end.
+
+8. **Desenvolvimento Web Back-end**
+   - **Linguagem de Programação**: PHP;
+   - **Descrição**: Implementação de funcionalidades back-end para aplicações web, utilizando PHP para manipulação de dados e integração com banco de dados.
+
