@@ -34,5 +34,5 @@ Este repositório contém materiais de estudo do curso Técnico em Desenvolvimen
 
 8. **Desenvolvimento Web Back-end**
    - **Linguagem de Programação**: PHP;
-   - **Descrição**: Implementação de funcionalidades back-end para aplicações web, utilizando PHP para manipulação de dados e integração com banco de dados.
+   - **Descrição**: Implementação de funcionalidades back-end para aplicações web, incluindo manipulação de dados e integração com banco de dados.
 
