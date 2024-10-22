@@ -1,0 +1,17 @@
+body {
+    font-family: Arial;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366; /* Cor do WhatsApp */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Cor ao passar o mouse */
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Usuários</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1>CRUD de Usuários</h1>
+
+    <br>
+
+    <h2>Formulário de usuários:</h2>
+    <form action="../src/crud_usuario.php" method="POST">
+        <label for="nome">ID:</label>
+        <input type="number" id="id" name="id" placeholder="ID para atualizar/excluir"><br><br>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome"><br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail"><br><br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" placeholder="Digite sua senha"><br><br>
+
+        <input type="submit" name="acao" value="Criar">
+        <input type="submit" name="acao" value="Atualizar">
+        <input type="submit" name="acao" value="Excluir">
+        <input type="submit" name="acao" value="Listar">
+    </form>
+</body>
+
+</html>
