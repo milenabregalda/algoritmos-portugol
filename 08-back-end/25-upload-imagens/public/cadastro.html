@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Nome e Foto</title>
+</head>
+
+<body>
+    <h1>Cadastro de Nome e Foto</h1>
+    <form action="../src/processar_envio.php" method="post" enctype="multipart/form-data">
+        <!-- Enctype especifica que os dados enviados incluem arquivos (como imagens), permitindo que o formulário envie
+            não apenas texto, mas também arquivos binários, como fotos ou documentos -->
+        <label for="name">Nome:</label>
+        <input type="text" name="name" id="name" required><br><br>
+
+        <label for="foto">Foto:</label>
+        <input type="file" name="foto" id="foto" accept="image/*" required><br><br>
+        <!-- File para permitir o envio de arquivos além de texto, accept image para restringir que só possam ser selecionadas imagens -->
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
